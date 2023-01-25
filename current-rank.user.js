@@ -1,6 +1,7 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
+<<<<<<< HEAD
 <<<<<<< HEAD:main
 // @version      1.0
 <<<<<<< HEAD:main
@@ -10,6 +11,9 @@
 =======
 // @version      0.9
 >>>>>>> 5e413b4 (update user script comment):current-rank.js
+=======
+// @version      1.0
+>>>>>>> b01fc38 (master release 1.0)
 // @description  shows current rank for rettungssimulator.online
 >>>>>>> b01fc38 (master release 1.0):current-rank.user.js
 =======
@@ -36,7 +40,6 @@
         type : "GET",
         success : function(r) {
             var rank = r.toplistRank.toLocaleString();
-            var rank = "TEST"
             ausgabe.innerHTML= "Dein Rank: " + rank;
             }
         });
