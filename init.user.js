@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Resi-Rank-Anzeige
+// @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
 // @version      0.2
 // @description  Current rank for rettungssimulator.online

@@ -1,10 +1,11 @@
 // ==UserScript==
-// @name         AktuellerRank
+// @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
 // @version      1.0
-// @description  Zwingt den aktuellen Rank in die Navigationsleiste
+// @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
+// @updateURL    https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.js
 // ==/UserScript==
 
 (function() {
