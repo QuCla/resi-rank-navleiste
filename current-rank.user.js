@@ -17,8 +17,8 @@
 >>>>>>> 23816b6 (change init to user script):current-rank.js
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
-// @updateURL    https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.js
-// @downloadURL  https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.js
+// @updateURL    https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.user.js
+// @downloadURL  https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.user.js
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
@@ -36,6 +36,7 @@
         type : "GET",
         success : function(r) {
             var rank = r.toplistRank.toLocaleString();
+            var rank = "TEST"
             ausgabe.innerHTML= "Dein Rank: " + rank;
             }
         });
