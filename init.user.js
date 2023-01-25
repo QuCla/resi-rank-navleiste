@@ -11,7 +11,7 @@
 // @run-at       document-end
 // ==/UserScript==
 
-const script = document.createElement('script');
+//const script = document.createElement('script');
 
-script.src = 'https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.js';
-document.head.appendChild(script);
+//script.src = 'https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.js';
+//document.head.appendChild(script);

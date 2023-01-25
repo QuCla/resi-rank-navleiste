@@ -7,7 +7,6 @@
 // @match        https://rettungssimulator.online/*
 // @updateURL    https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.js
 // @downloadURL  https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.js
-// @run-at       document-end
 // ==/UserScript==
 
 (function() {
