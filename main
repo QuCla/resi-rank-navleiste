@@ -2,7 +2,11 @@
 // @name         AktuellerRank
 // @namespace    http://tampermonkey.net/
 // @version      1.0
+<<<<<<< HEAD:main
 // @description  Zwingt den aktuellen Rank in die Navigationsleiste
+=======
+// @description  shows current rank for rettungssimulator.online
+>>>>>>> b01fc38 (master release 1.0):current-rank.user.js
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
 // ==/UserScript==
