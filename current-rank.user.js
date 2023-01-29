@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
-// @version      1.1
+// @version      1.2
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
@@ -11,7 +11,7 @@
 // @run-at       document-end
 // ==/UserScript==
 
-(function() {
+function placeRank() {
     'use strict';
     let output = document.createElement("div");
     document.getElementsByClassName("muenzen_marken")[0].after(output);
@@ -25,10 +25,11 @@
         success : function(r) {
             let rank = r.toplistRank.toLocaleString();
             output.innerHTML= "Dein Rank: " + rank;
+            output.setAttribute('data-tooltip', 'Dein aktueller Rang in der Topliste.')
             }
         });
     };
     periodic()
     setInterval(periodic, 60000) //Aktualisiert alle 10min
-})
-();
+}
+placeRank();
