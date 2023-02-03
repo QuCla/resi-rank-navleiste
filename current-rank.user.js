@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
-// @version      1.3
+// @version      1.3.1
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
@@ -14,8 +14,8 @@
 'use strict';
 
 function PlaceRank() {
-    let output = document.createElement('a');
-    document.getElementsByClassName('muenzen_marken')[0].after(output);
+    let toplevel = document.createElement('div');
+    let lowlevel = document.createElement('div');
 
     function periodic(){
         $.ajax({
@@ -25,13 +25,14 @@ function PlaceRank() {
         success : function(r) {
             let rank = r.toplistRank.toLocaleString();
             let name = document.createTextNode('Dein Rang: ' + rank);
-            document.getElementsByClassName('muenzen_marken')[0].after(output);
-            output.href = 'toplist';
-            output.appendChild(name);
-            output.setAttribute('data-tooltip', 'Dein aktueller Rang in der Topliste.');
-            output.setAttribute('class', 'frame-opener');
-            output.setAttribute('frame', '1/1/4/4');
-            output.setAttribute('frame-url', 'toplist');
+            document.getElementsByClassName('muenzen_marken')[0].after(toplevel);
+            toplevel.setAttribute('class', 'showRank');
+            toplevel.appendChild(lowlevel);
+            lowlevel.appendChild(name);
+            lowlevel.setAttribute('data-tooltip', 'Dein aktueller Rang in der Topliste.');
+            lowlevel.setAttribute('class', 'frame-opener');
+            lowlevel.setAttribute('frame', '1/1/4/4');
+            lowlevel.setAttribute('frame-url', 'toplist');
             }
         });
     };
