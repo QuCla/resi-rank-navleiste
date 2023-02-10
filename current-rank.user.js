@@ -1,16 +1,14 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
-// @version      1.3.2
+// @version      1.3.3
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
 // @updateURL    https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.user.js
-// @downloadURL  https://github.com/QuCla/resi-rank-navleiste/raw/master/current-rank.user.js
 // @grant        none
 // @run-at       document-end
 // ==/UserScript==
-
 'use strict';
 
 function PlaceRank() {
