@@ -40,6 +40,6 @@ Mein Skript funktioniert zusammen mit diesem Skripten:
 
 ## In Arbeit
 
-- [x]   |   Dein Rank in der Nav-Leiste
-- [x]   |   Link zur Topliste
-- [ ]   |   Link direkt an die richtige Stelle in Topliste
+- [x] Dein Rank in der Nav-Leiste
+- [x] Link zur Topliste
+- [ ] Link direkt an die richtige Stelle in Topliste
