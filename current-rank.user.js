@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
-// @version      1.4.2
+// @version      1.4.4
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
@@ -44,10 +44,35 @@ function PlaceRankDE() {
         });
     };
     periodic()
-    setInterval(periodic, 60000) //Aktualisiert alle 10min
+    setInterval(periodic, 600000) //Aktualisiert alle 10min
 }
 function PlaceRankEN(){
+    let toplevel = document.createElement('div');
+    let lowlevel = document.createElement('div');
 
+    function periodic(){
+        $.ajax({
+        url: "/api/user",
+        dataType: "json",
+        type : "GET",
+        success : function(r) {
+            let rank = r.toplistRank.toLocaleString();
+            let ranksite = Math.ceil(rank / 20);
+            let name = ('Your Rank: ' + rank);
+            document.getElementsByClassName('muenzen_marken')[0].after(toplevel);
+            toplevel.setAttribute('class', 'showRank');
+            toplevel.appendChild(lowlevel);
+            lowlevel.innerHTML = name;
+            lowlevel.setAttribute('data-tooltip', 'Your actual rank within the toplist.');
+            lowlevel.setAttribute('class', 'frame-opener');
+            lowlevel.setAttribute('frame', '1/1/4/4');
+            let link = 'toplist/' + ranksite;
+            lowlevel.setAttribute('frame-url', link);
+            }
+        });
+    };
+    periodic()
+    setInterval(periodic, 600000) //Aktualisiert alle 10min
 }
 
 PlaceRankDE();
