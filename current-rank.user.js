@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
-// @version      1.4
+// @version      1.4.1
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
@@ -11,7 +11,7 @@
 // ==/UserScript==
 'use strict';
 
-function PlaceRank() {
+function PlaceRankDE() {
     let toplevel = document.createElement('div');
     let lowlevel = document.createElement('div');
 
@@ -39,4 +39,4 @@ function PlaceRank() {
     periodic()
     setInterval(periodic, 60000) //Aktualisiert alle 10min
 }
-PlaceRank();
+PlaceRankDE();
