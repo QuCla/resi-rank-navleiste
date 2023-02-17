@@ -1,7 +1,11 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
+<<<<<<< HEAD
 // @version      1.4.5
+=======
+// @version      1.5
+>>>>>>> 4e5cad18b67988d22a81b287f4a39ccb63d20084
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
