@@ -17,7 +17,6 @@ function TextInputJump(){
         document.getElementById('newMissionNameInput').focus();
         }
 }
-
 function PlaceRankDE() {
     let toplevel = document.createElement('div');
     let lowlevel = document.createElement('div');
@@ -74,6 +73,8 @@ function PlaceRankEN(){
     periodic()
     setInterval(periodic, 600000) //Aktualisiert alle 10min
 }
+
+
 
 PlaceRankDE();
 

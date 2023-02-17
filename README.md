@@ -1,6 +1,6 @@
 # Current Rank
 
-- (EN) - english version in work
+- (EN) - [englisch Version of Readme]()
 - (DE) - Mit diesem Skript wird dein aktueller Toplisten-Rank in die Navigationsleiste gelegt.
 
 Das Skript funktioniert für die Webseite [@Rettungssimulator](https://github.cim/Rettungssimulator).
