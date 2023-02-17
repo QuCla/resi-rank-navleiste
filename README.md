@@ -1,6 +1,6 @@
 # Current Rank
 
-- (EN) - [englisch Version of Readme]()
+- (EN) - [englisch Version of Readme](https://github.com/QuCla/resi-rank-navleiste/blob/master/README_EN.md)
 - (DE) - Mit diesem Skript wird dein aktueller Toplisten-Rank in die Navigationsleiste gelegt.
 
 Das Skript funktioniert für die Webseite [@Rettungssimulator](https://github.cim/Rettungssimulator).

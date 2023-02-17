@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
-// @version      1.4.5
+// @version      1.5
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
@@ -10,6 +10,7 @@
 // @run-at       document-end
 // ==/UserScript==
 'use strict';
+var userLang = navigator.language;
 
 function TextInputJump(){
     if(location.pathname.includes('mission')){
@@ -75,7 +76,11 @@ function PlaceRankEN(){
 }
 
 
-
-PlaceRankDE();
+if(userLang == 'de'){
+    PlaceRankDE();
+    }
+else{
+    PlaceRankEN();
+    }
 
 TextInputJump();
