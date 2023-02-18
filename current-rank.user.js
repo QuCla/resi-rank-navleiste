@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
-// @version      1.5.1
+// @version      1.5.2
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
@@ -76,7 +76,7 @@ function PlaceRankEN(){
 }
 
 
-if(userLang.match('de'){
+if(userLang.match('de')){
     PlaceRankDE();
     }
 else{
