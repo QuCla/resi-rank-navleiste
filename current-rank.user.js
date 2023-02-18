@@ -12,8 +12,18 @@
 'use strict';
 var userLang = navigator.language;
 
+const deText = {
+    header : 'Dein Rang: ',
+    tooltip: 'Dein aktueller Rang in der Topliste.'
+}
+
+const enText = {
+    header : 'your rank: ',
+    tooltip: 'Your actual rank within the toplist.'
+}
+
 function TextInputJump(){
-    if(location.pathname.includes('missionNew')){
+    if(location.pathname.includes('missionNew/')){
         document.getElementById('newMissionNameInput').focus();
         }
 }
