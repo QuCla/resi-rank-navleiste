@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Resi-Rang-Anzeige
 // @namespace    http://tampermonkey.net/
-// @version      1.5.4.1
+// @version      1.5.4.3
 // @description  shows current rank for rettungssimulator.online
 // @author       QuCla
 // @match        https://rettungssimulator.online/*
@@ -11,6 +11,7 @@
 // ==/UserScript==
 'use strict';
 var userLang = navigator.language;
+var langObj;
 
 const deText = {
     header : 'Dein Rang: ',
@@ -27,7 +28,7 @@ function TextInputJump(){
         document.getElementById('newMissionNameInput').focus();
         }
 }
-function PlaceRankDE() {
+function PlaceRank() {
     let toplevel = document.createElement('div');
     let lowlevel = document.createElement('div');
 
@@ -39,40 +40,12 @@ function PlaceRankDE() {
         success : function(r) {
             let rank = r.toplistRank.toLocaleString();
             let ranksite = Math.ceil(rank / 20);
-            let name = ('Dein Rang: ' + rank);
+            let name = (langObj.header + ' ' + rank);
             document.getElementsByClassName('muenzen_marken')[0].after(toplevel);
             toplevel.setAttribute('class', 'showRank');
             toplevel.appendChild(lowlevel);
             lowlevel.innerHTML = name;
-            lowlevel.setAttribute('data-tooltip', 'Dein aktueller Rang in der Topliste.');
-            lowlevel.setAttribute('class', 'frame-opener');
-            lowlevel.setAttribute('frame', '1/1/4/4');
-            let link = 'toplist/' + ranksite;
-            lowlevel.setAttribute('frame-url', link);
-            }
-        });
-    };
-    periodic()
-    setInterval(periodic, 600000) //Aktualisiert alle 10min
-}
-function PlaceRankEN(){
-    let toplevel = document.createElement('div');
-    let lowlevel = document.createElement('div');
-
-    function periodic(){
-        $.ajax({
-        url: "/api/user",
-        dataType: "json",
-        type : "GET",
-        success : function(r) {
-            let rank = r.toplistRank.toLocaleString();
-            let ranksite = Math.ceil(rank / 20);
-            let name = ('Your Rank: ' + rank);
-            document.getElementsByClassName('muenzen_marken')[0].after(toplevel);
-            toplevel.setAttribute('class', 'showRank');
-            toplevel.appendChild(lowlevel);
-            lowlevel.innerHTML = name;
-            lowlevel.setAttribute('data-tooltip', 'Your actual rank within the toplist.');
+            lowlevel.setAttribute('data-tooltip', langObj.tooltip);
             lowlevel.setAttribute('class', 'frame-opener');
             lowlevel.setAttribute('frame', '1/1/4/4');
             let link = 'toplist/' + ranksite;
@@ -86,10 +59,12 @@ function PlaceRankEN(){
 
 
 if(userLang.match('de')){
-    PlaceRankDE();
+    langObj = deText;
     }
 else{
-    PlaceRankEN();
+    langObj = enText;
     }
+
+PlaceRank();
 
 //TextInputJump();
