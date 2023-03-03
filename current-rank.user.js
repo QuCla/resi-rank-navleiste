@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         Resi-Rang-Anzeige
+// @name         ReSi - Rang-Anzeige
 // @namespace    http://tampermonkey.net/
 // @version      1.5.4.3
 // @description  shows current rank for rettungssimulator.online
@@ -23,11 +23,7 @@ const enText = {
     tooltip: 'Your actual rank within the toplist.'
 }
 
-function TextInputJump(){
-    if(location.pathname.includes('missionNew/')){
-        document.getElementById('newMissionNameInput').focus();
-        }
-}
+
 function PlaceRank() {
     let toplevel = document.createElement('div');
     let lowlevel = document.createElement('div');
@@ -66,5 +62,3 @@ else{
     }
 
 PlaceRank();
-
-//TextInputJump();
