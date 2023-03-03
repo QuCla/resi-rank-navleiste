@@ -24,15 +24,6 @@ These browser were tested with the script:
 | Firefox | :ballot_box_with_check:     |
 
 
-## Supported Scripts
-
-I tested my script with some other scripts:
-
-- :ballot_box_with_check: [Resi Script Manager](https://github.com/TheKeineAhnung/resi-script-manager) by KeineAhnung
-- :ballot_box_with_check: [Uhr](https://forum.rettungssimulator.online/index.php?thread/1454-uhr/&postID=7948&highlight=uhr#post7948) by NiZi112
-- :ballot_box_with_check: [MAI_more association infos](https://github.com/QuCla/resi-association-information) by QuCla
-
-
 ## Bugs & Suggestions
 
  - You found a bug? Please open an [Issue](https://github.com/QuCla/resi-association-information/issues/new) and tell me your browser too.
