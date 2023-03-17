@@ -1,4 +1,6 @@
 {
   "name": "resi-rank-navleiste",
-  "version": "1.6"
-  }
+  "version": "1.6",
+  "author": "QuCla",
+  "license": "MIT"
+}
