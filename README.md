@@ -1,5 +1,4 @@
 [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/qucla/resi-rank-navleiste)
 ![GitHub](https://img.shields.io/github/license/qucla/resi-rank-navleiste)
 
 
