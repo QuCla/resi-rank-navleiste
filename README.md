@@ -36,5 +36,4 @@ Bei diesen Browser klappt das Skript:
 ## In Arbeit
 
 - [x] Dein Rank in der Nav-Leiste
-- [x] Link zur Topliste
 - [x] Link direkt an die richtige Stelle in Topliste

@@ -34,5 +34,4 @@ These browser were tested with the script:
 ## Workload
 
 - [x] Show your rank in navbar
-- [x] Link to toplist
 - [x] Link to your position in the toplist
